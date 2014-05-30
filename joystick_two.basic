@@ -1,0 +1,11 @@
+0 rem !to "build/joystick-two.prg"
+10 rem read joystick #2
+20 j=peek(56320):if j=127 then 20
+30 rem output the direction
+40 if (j and 1)=0 then print "up ";
+50 if (j and 2)=0 then print "down ";
+60 if (j and 4)=0 then print "left ";
+70 if (j and 8)=0 then print "right ";
+80 if (j and 16)=0 then print "fire";
+90 print
+95 goto 20
